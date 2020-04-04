@@ -4,12 +4,12 @@ function isObj(object) {
   return (
     object &&
     typeof object == 'object' &&
-    Object.prototype.toString.call(object).toLowerCase() == '[object object]'
+    Object.prototype.toString.call(object).toLowerCase() === '[object object]'
   );
 }
 
 function isArray(object) {
-  return object && typeof object == 'object' && object.constructor == Array;
+  return object && typeof object == 'object' && object.constructor === Array;
 }
 
 function getLength(object) {
@@ -29,7 +29,7 @@ function Compare(objA, objB) {
 }
 
 function CompareArray(objA, objB, flag) {
-  if (objA.length != objB.length) return false;
+  if (objA.length !== objB.length) return false;
   for (let i in objB) {
     if (!Compare(objA[i], objB[i])) {
       flag = false;
