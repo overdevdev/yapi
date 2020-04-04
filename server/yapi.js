@@ -21,6 +21,7 @@ if (WEBCONFIG.mail && WEBCONFIG.mail.enable) {
 /**
  * 获取一个model实例，如果不存在则创建一个新的返回
  * @param {*} m class
+ * @param args constructor params
  * @example
  * yapi.getInst(groupModel, arg1, arg2)
  */
