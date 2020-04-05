@@ -1,4 +1,12 @@
-.tree-wrappper{
+.tree-wrappper {
   min-height: 500px;
   overflow-y: scroll;
+}
+
+.container-title {
+  display: flex;
+}
+
+.interface-item-nav, .item-all-interface {
+  height: 42px;
 }

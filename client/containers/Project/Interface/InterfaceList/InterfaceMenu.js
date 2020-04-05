@@ -484,7 +484,7 @@ class InterfaceMenu extends Component {
                       e.stopPropagation();
                       this.showConfirm(item);
                     }}
-                    style={{ display: this.state.delIcon == item._id ? 'block' : 'none' }}
+                    style={{ display: this.state.delIcon === item._id ? 'block' : 'none' }}
                   />
                 </Tooltip>
                 <Tooltip title="复制接口">
@@ -495,13 +495,10 @@ class InterfaceMenu extends Component {
                       e.stopPropagation();
                       this.copyInterface(item._id);
                     }}
-                    style={{ display: this.state.delIcon == item._id ? 'block' : 'none' }}
+                    style={{ display: this.state.delIcon === item._id ? 'block' : 'none' }}
                   />
                 </Tooltip>
               </div>
-              {/*<Dropdown overlay={menu(item)} trigger={['click']} onClick={e => e.stopPropagation()}>
-            <Icon type='ellipsis' className="interface-delete-icon" style={{ opacity: this.state.delIcon == item._id ? 1 : 0 }}/>
-          </Dropdown>*/}
             </div>
           }
           key={'' + item._id}
@@ -583,14 +580,14 @@ class InterfaceMenu extends Component {
                                 e.stopPropagation();
                                 this.showDelCatConfirm(item._id);
                               }}
-                              style={{ display: this.state.delIcon == item._id ? 'block' : 'none' }}
+                              style={{ display: this.state.delIcon === item._id ? 'block' : 'none' }}
                             />
                           </Tooltip>
                           <Tooltip title="修改分类">
                             <Icon
                               type="edit"
                               className="interface-delete-icon"
-                              style={{ display: this.state.delIcon == item._id ? 'block' : 'none' }}
+                              style={{ display: this.state.delIcon === item._id ? 'block' : 'none' }}
                               onClick={e => {
                                 e.stopPropagation();
                                 this.changeModal('change_cat_modal_visible', true);
@@ -604,7 +601,7 @@ class InterfaceMenu extends Component {
                             <Icon
                               type="plus"
                               className="interface-delete-icon"
-                              style={{ display: this.state.delIcon == item._id ? 'block' : 'none' }}
+                              style={{ display: this.state.delIcon === item._id ? 'block' : 'none' }}
                               onClick={e => {
                                 e.stopPropagation();
                                 this.changeModal('visible', true);
@@ -615,10 +612,6 @@ class InterfaceMenu extends Component {
                             />
                           </Tooltip>
                         </div>
-
-                        {/*<Dropdown overlay={menu(item)} trigger={['click']} onClick={e => e.stopPropagation()}>
-                <Icon type='ellipsis' className="interface-delete-icon" />
-              </Dropdown>*/}
                       </div>
                     }
                     key={'cat_' + item._id}
