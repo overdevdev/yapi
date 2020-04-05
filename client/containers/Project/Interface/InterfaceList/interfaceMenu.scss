@@ -3,10 +3,11 @@
   overflow-y: scroll;
 }
 
-.container-title {
+.interface-list .container-title {
   display: flex;
 }
 
-.interface-item-nav, .item-all-interface {
-  height: 42px;
+.interface-list.ant-tree li span.ant-tree-switcher {
+  height: 30px;
+  line-height: 30px;
 }
