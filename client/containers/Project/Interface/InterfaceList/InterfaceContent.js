@@ -150,9 +150,8 @@ class Content extends Component {
     return (
       <div className="interface-content">
         <Prompt
-          when={this.state.curtab === 'edit' && this.props.editStatus ? true : false}
+          when={this.state.curtab === 'edit' && this.props.editStatus}
           message={() => {
-            // this.showModal();
             return '离开页面会丢失当前编辑的内容，确定要离开吗？';
           }}
         />
