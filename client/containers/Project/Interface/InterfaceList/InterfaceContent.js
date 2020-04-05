@@ -1,7 +1,7 @@
 import React, { PureComponent as Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { Tabs, Modal, Button } from 'antd';
+import { Tabs, Modal, Button, Affix } from 'antd'
 import Edit from './Edit.js';
 import View from './View.js';
 import { Prompt } from 'react-router';
@@ -130,7 +130,7 @@ class Content extends Component {
 
     const tabs = (
       <Tabs
-        className="tabs-large"
+        className="tabs-large interface-content-tabs"
         onChange={this.onChange}
         activeKey={this.state.curtab}
         defaultActiveKey="view"
@@ -155,7 +155,9 @@ class Content extends Component {
             return '离开页面会丢失当前编辑的内容，确定要离开吗？';
           }}
         />
-        {tabs}
+        <Affix>
+          {tabs}
+        </Affix>
         {tabContent}
         {this.state.visible && (
           <Modal
